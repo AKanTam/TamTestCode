@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>snow.png</file>
+        <file>bingbao.png</file>
+        <file>rain.png</file>
+        <file>MediaPlayer.qml</file>
+    </qresource>
+</RCC>
