@@ -1,0 +1,20 @@
+登录过期：
+{
+    "result": {
+        "resultCode": "401",
+        "resultError": "用户登录凭证已失效，请重新登录！"
+    },
+    "status": false
+}
+
+
+
+没登录：
+{
+    "data": null,
+    "result": {
+        "resultCode": "401",
+        "resultError": "用户不存在"
+    },
+    "status": false
+}
