@@ -5,8 +5,13 @@
 #include <string>
 #include <cstdlib>
 #include <fstream>
+#include <map>
+
 #include <httplib.h>
 #include <cjson/cJSON.h>
+
+#define MAPITERATOR
+//#define APICHECK
 
 httplib::Client cli("172.20.61.16:9080");
 httplib::Headers headers = {
@@ -63,14 +68,64 @@ int main()
 
     auto resPost = cli.Post("/supaiot/api/v2/app/sec/login", IOT_LoginChar.c_str(), "application/json");
     httplib::Headers headersLogin = resPost->headers;
+
     if (headersLogin.find("set-cookie") != headersLogin.end())
     {
-        std::cout << headersLogin.find("set-cookie")->second << "\n";
-        headers.insert({"cookie", headersLogin.find("set-cookie")->second});
+        cJSON* monitor = cJSON_CreateObject();
+        cJSON* readArray = cJSON_AddArrayToObject(monitor, "ID");
+        cJSON* item_name = cJSON_CreateString("JX_ZHTC_DC_36");
+        cJSON* item_name1 = cJSON_CreateString("JX_ZHTC_DC_37");
+        cJSON_AddItemToArray(readArray, item_name);
+        cJSON_AddItemToArray(readArray, item_name1);
+        char* str = cJSON_Print(monitor);
+#ifdef APICHECK
+        while (1) {
+            if (headers.find("cookie") == headers.end()) {
+
+                headers.insert({ "cookie", headersLogin.find("set-cookie")->second });
+            }
+            else {
+                headers.erase("cookie");
+                headers.insert({ "cookie", headersLogin.find("set-cookie")->second });
+            }
+
+            auto resGet = cli.Post("/supaiot/api/v2/data/real/device/list", headers, str, "application/json");
+            if (resGet->status == 200) {
+                std::cout << "body: " << UtfToGbk(resGet->body) << "\n";
+            }
+            else {
+                std::cout << "status: " << resGet->status << "\n";
+                std::cout << "body: " << UtfToGbk(resGet->body) << "\n";
+            }
+
+    }
 
         // auto resGet = cli.Get("/supaiot/api/v2/project", headers);
         // std::cout << UtfToGbk(resGet->body) << "\n";
+#endif // APICHECK
+
+
     }
+
+#ifdef MAPITERATOR
+    std::map<std::string, std::map<std::string, int>> m_map;
+    m_map.clear();
+    m_map["sting1"].insert(std::pair < std::string, int>("1", 5));
+    m_map["sting1"].insert(std::pair < std::string, int>("2", 5));
+    m_map["sting1"].insert(std::pair < std::string, int>("3", 5));
+    m_map["sting2"].insert(std::pair < std::string, int>("1", 5));
+    m_map["sting2"].insert(std::pair < std::string, int>("2", 5));
+    m_map["sting2"].insert(std::pair < std::string, int>("3", 5));
+    std::map<std::string, int>::iterator tempmap = m_map.find("sting1")->second.find("3");
+    tempmap->second = 10;
+
+    std::cout << tempmap->first << "\n";
+    std::cout << m_map["sting1"]["1"] << "\n";
+    std::cout << m_map.size() << "\n";
+#endif // MAPITERATOR
+
+
+
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
