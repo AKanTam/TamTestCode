@@ -2,26 +2,65 @@
 //
 
 #include <iostream>
-#include <httplib.h>
+#include "httplib.h"
+#include <thread>
 
 using namespace httplib;
 using namespace std;
+#define fromData
 
 
 void ss(const Request& req, Response& res) {
-    cout<<req.body<<endl;
-    res.set_content(req.body, "application/json");
+#ifdef fromData
+    const auto& file = req.get_file_value("toiletId");//表单数据
+    cout << file.content << endl;//表单数据
+#endif // fromData
+
+    //cout<<req.body<<endl;
+    res.set_content(req.body, "multipart/form-data");
 }
 
-int main()
-{
-
+void httpSrv() {
     Server svr;
 
     svr.Post("/h", ss);
 
     //svr.listen("172.20.61.20", 1234);
     svr.listen("0.0.0.0", 1234);
+}
+
+void httpCli() {
+
+#ifdef fromData
+    while (1) {
+        Client cli("127.0.0.1:1234");
+        httplib::MultipartFormDataItems items = {
+          { "text1", "text default", "", "" },
+          { "text2", "aωb", "", "" },
+          { "file1", "h\ne\n\nl\nl\no\n", "hello.txt", "text/plain" },
+          { "file2", "{\n  \"world\", true\n}\n", "world.json", "application/json" },
+          { "file3", "", "", "application/octet-stream" }
+        };
+        MultipartFormData ss = { "toiletId", "text default", "", "" };
+        items.push_back(ss);
+
+
+        auto res = cli.Post("/h", items);
+        cout << "post" << endl;
+        Sleep(1000);
+        
+    }
+#endif // fromData
+}
+
+int main()
+{
+    thread server(httpSrv);
+    thread client(httpCli);
+
+    server.join();
+    client.join();
+
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
