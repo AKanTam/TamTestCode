@@ -1,0 +1,286 @@
+{
+  "sensor": {
+    "power": 255,
+    "index": 0,
+    "time": 1668601780,
+    "type": "cubicle",
+    "cubicles": [
+      {
+        "status": 1,
+        "index": 53,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 30,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 31,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 32,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 33,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 34,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 35,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 36,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 37,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 38,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 39,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 52,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 51,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 50,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 49,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 48,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 47,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 46,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 45,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 44,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 43,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 42,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 41,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 40,
+        "gender": 16
+      },
+      {
+        "status": 0,
+        "index": 1,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 2,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 3,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 4,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 5,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 6,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 7,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 8,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 9,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 10,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 11,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 12,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 13,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 14,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 15,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 16,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 17,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 18,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 19,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 20,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 21,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 22,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 23,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 24,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 25,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 26,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 27,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 28,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 29,
+        "gender": 32
+      },
+      {
+        "status": 0,
+        "index": 54,
+        "gender": 48
+      },
+      {
+        "status": 0,
+        "index": 55,
+        "gender": 48
+      }
+    ]
+  },
+  "ser_num": "43-0E-1216R6469"
+}

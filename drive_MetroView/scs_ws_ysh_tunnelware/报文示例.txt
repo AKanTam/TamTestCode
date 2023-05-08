@@ -1,0 +1,65 @@
+{
+  "type": 1,
+  "data": [
+    {
+      "id": "1",
+      "dayTotalEnterNum": 777,
+      "dayTotalOutNum": 55,
+      "fiveMinTotalEnterNum": 1,
+      "fiveMinTotalOutNum": 2,
+      "fiveResident": 0,
+      "residentNum": 722,
+      "queuedIndex": 0
+    },
+    {
+      "id": "2",
+      "dayTotalEnterNum": 659,
+      "dayTotalOutNum": 661,
+      "fiveMinTotalEnterNum": 3,
+      "fiveMinTotalOutNum": 3,
+      "fiveResident": 0,
+      "residentNum": 0,
+      "queuedIndex": 0
+    },
+    {
+      "id": "3",
+      "dayTotalEnterNum": 381,
+      "dayTotalOutNum": 386,
+      "fiveMinTotalEnterNum": 1,
+      "fiveMinTotalOutNum": 1,
+      "fiveResident": 0,
+      "residentNum": 0,
+      "queuedIndex": 0
+    },
+    {
+      "id": "4",
+      "dayTotalEnterNum": 1062,
+      "dayTotalOutNum": 92,
+      "fiveMinTotalEnterNum": 5,
+      "fiveMinTotalOutNum": 2,
+      "fiveResident": 3,
+      "residentNum": 970,
+      "queuedIndex": 0
+    },
+    {
+      "id": "5",
+      "dayTotalEnterNum": 679,
+      "dayTotalOutNum": 678,
+      "fiveMinTotalEnterNum": 1,
+      "fiveMinTotalOutNum": 2,
+      "fiveResident": 0,
+      "residentNum": 1,
+      "queuedIndex": 0
+    },
+    {
+      "id": "6",
+      "dayTotalEnterNum": 464,
+      "dayTotalOutNum": 460,
+      "fiveMinTotalEnterNum": 5,
+      "fiveMinTotalOutNum": 5,
+      "fiveResident": 0,
+      "residentNum": 4,
+      "queuedIndex": 0
+    }
+  ]
+}
